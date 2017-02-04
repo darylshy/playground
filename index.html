@@ -11,18 +11,14 @@
 </head>
 <body>
     <div class="container-fluid" ng-controller="GuessingGameCtrl">
-        <input type="number" ng-model="currentguess" ng-blur="colderWarmer(currentguess)">
+        <input type="number" ng-model="currentguess" ng-change="colderWarmer(currentguess)">
         <div ng-switch on="currentguess">
-            <p ng-switch-default="currentguess">Current Guess: {{ currentguess }}
+            <p ng-switch-default="currentguess" ng-cloak>Your Guess: {{ currentguess }}
                 <span ng-if="currentguess" ng-show="currentguess > correct">-Too High</span>
                 <span ng-if="currentguess" ng-show="currentguess < correct">-Too Low</span>
             </p>
-            <p ng-switch-default="previousguess">Previous Guess: {{ ::previousguess }}
-                <span ng-if="::previousguess" ng-show="::previousguess > correct">-Too High</span>
-                <span ng-if="::previousguess" ng-show="::previousguess < correct">-Too Low</span>
-            </p>
-            <p ng-if="currentguess">{{ message }}</p>
-            <h1 ng-switch-when="correct">You Guessed Correctly!</h1>
+            <p ng-if="currentguess" ng-bind="message"></p>
+            <h1 ng-switch-when="correct" ng-bind="'You Guessed Correctly!'"></h1>
         </div>
 
     </div>
