@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en" ng-app="app">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="main.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container-fluid" ng-controller="GuessingGameCtrl">
+        <input type="number" ng-model="currentguess" ng-blur="colderWarmer(currentguess)">
+        <div ng-switch on="currentguess">
+            <p ng-switch-default="currentguess">Current Guess: {{ currentguess }}
+                <span ng-if="currentguess" ng-show="currentguess > correct">-Too High</span>
+                <span ng-if="currentguess" ng-show="currentguess < correct">-Too Low</span>
+            </p>
+            <p ng-switch-default="previousguess">Previous Guess: {{ ::previousguess }}
+                <span ng-if="::previousguess" ng-show="::previousguess > correct">-Too High</span>
+                <span ng-if="::previousguess" ng-show="::previousguess < correct">-Too Low</span>
+            </p>
+            <p ng-if="currentguess">{{ message }}</p>
+            <h1 ng-switch-when="correct">You Guessed Correctly!</h1>
+        </div>
+
+    </div>
+
+
+<script src="node_modules/jquery/dist/jquery.min.js"></script>
+<script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="node_modules/angular/angular.min.js"></script>
+<script src="app.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.11/angular-route.js"></script>
+<script src="message.controller.js"></script>
+<script src="message.directive.js"></script>
+</body>
+</html>
