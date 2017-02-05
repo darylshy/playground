@@ -6,17 +6,5 @@ div{
   &.div1{
     background-color: darkblue;
   }
-  &.div2{
-    background-color: lighten(darkblue,20%);
-  }
-  &.div3{
-    background-color: lighten(darkblue,30%);
-  }
-  &.div4{
-    background-color: lighten(darkblue,40%);
-  }
-  &.div5{
-    background-color: lighten(darkblue,50%);
-  }
 }
 

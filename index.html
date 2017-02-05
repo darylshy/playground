@@ -12,28 +12,7 @@
     <title>Document</title>
 </head>
 <body>
-    <div class="container-fluid div1"
-         ng-init="someProperty = 'some data'">Inside Div 1</div>
-        <div class="div2"
-             ng-init="siblingProperty = 'more data'"> Inside Div 2: <br>{{ aThirdProperty }}
-            <div class="div3"
-                 ng-init="aThirdProperty = 'data for 3rd property'"
-                 ng-controller="SomeController"> Inside Div 3: <br>{{ aThirdProperty }}
-                <div class="div4"
-                     ng-init="aFourthProperty='a 4th prop'"
-                     ng-controller="SecondController">
-                    Inside Div 4: <br>{{ aThirdProperty }}<br>
-                    {{ div5Property }}
-                    <div class="div5"
-                         ng-init="div5Property = 'div 5\'s prop'"
-                         my-directive>
-                        Inside Div 5: <br>
-                        {{ div5Property }} <br>
-                        {{ aFourthProperty }}
-                    </div>
-                </div>
-            </div>
-        </div>
+    <div class="container-fluid div1" ng-controller="ClassController as myCtrl">{{ myCtrl.sayHello() }}</div>
 
 
 
