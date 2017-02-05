@@ -6,34 +6,37 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Cinzel" rel="stylesheet">
     <link rel="stylesheet" href="main.css">
+
     <title>Document</title>
 </head>
 <body>
-    <div class="container-fluid" ng-controller="GuessingGameCtrl as game">
-        <guessing-game-title>by Daryl Shy</guessing-game-title>
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 text-center console h1 jumbotron"
-                ng-class="{
-                    warmer10: currentguess - correct < 100,
-                    warmer20: currentguess - correct >100 && currentguess - correct<200,
-                    correct: currentguess === correct
-                }"
-            >
-                <input type="number" ng-model="currentguess" ng-blur="colderWarmer(currentguess)">
-                <div ng-switch on="currentguess">
-                    <p ng-switch-default="currentguess" ng-cloak>Your Guess: {{ currentguess }}
-                        <span ng-if="currentguess" ng-show="currentguess > correct">-Too High</span>
-                        <span ng-if="currentguess" ng-show="currentguess < correct">-Too Low</span>
-                    </p>
-                    <p ng-if="currentguess" ng-bind="message" alert-danger></p>
-                    <h1 ng-switch-when="correct" ng-bind="'You Guessed Correctly!'"></h1>
+    <div class="container-fluid div1"
+         ng-init="someProperty = 'some data'">Inside Div 1</div>
+        <div class="div2"
+             ng-init="siblingProperty = 'more data'"> Inside Div 2: <br>{{ aThirdProperty }}
+            <div class="div3"
+                 ng-init="aThirdProperty = 'data for 3rd property'"
+                 ng-controller="SomeController"> Inside Div 3: <br>{{ aThirdProperty }}
+                <div class="div4"
+                     ng-init="aFourthProperty='a 4th prop'"
+                     ng-controller="SecondController">
+                    Inside Div 4: <br>{{ aThirdProperty }}<br>
+                    {{ div5Property }}
+                    <div class="div5"
+                         ng-init="div5Property = 'div 5\'s prop'"
+                         my-directive>
+                        Inside Div 5: <br>
+                        {{ div5Property }} <br>
+                        {{ aFourthProperty }}
+                    </div>
                 </div>
             </div>
         </div>
 
 
-    </div>
+
 
 
 <script src="node_modules/jquery/dist/jquery.min.js"></script>

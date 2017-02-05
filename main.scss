@@ -1,22 +1,22 @@
-.container-fluid, body{
-  background-color: darkgrey;
-  height: 100%;
-}
-.console{
-  margin-top: 10%;
-}
-
-@for $i from 1 through 5 {
-  .warmer#{$i * 10} {
-    background-color: lighten(red,$i*10%);
+div{
+  font-size:2em;
+  font-family: 'Cinzel', serif;
+  color: aliceblue;
+  padding: 20px;
+  &.div1{
+    background-color: darkblue;
+  }
+  &.div2{
+    background-color: lighten(darkblue,20%);
+  }
+  &.div3{
+    background-color: lighten(darkblue,30%);
+  }
+  &.div4{
+    background-color: lighten(darkblue,40%);
+  }
+  &.div5{
+    background-color: lighten(darkblue,50%);
   }
 }
 
-@for $i from 1 through 5 {
-  .colder#{$i * 10} {
-    background-color: lighten(blue,$i*10%);
-  }
-}
-.correct{
-  background-color: limegreen !important;
-}
