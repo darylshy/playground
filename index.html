@@ -10,16 +10,28 @@
     <title>Document</title>
 </head>
 <body>
-    <div class="container-fluid" ng-controller="GuessingGameCtrl">
-        <input type="number" ng-model="currentguess" ng-change="colderWarmer(currentguess)">
-        <div ng-switch on="currentguess">
-            <p ng-switch-default="currentguess" ng-cloak>Your Guess: {{ currentguess }}
-                <span ng-if="currentguess" ng-show="currentguess > correct">-Too High</span>
-                <span ng-if="currentguess" ng-show="currentguess < correct">-Too Low</span>
-            </p>
-            <p ng-if="currentguess" ng-bind="message"></p>
-            <h1 ng-switch-when="correct" ng-bind="'You Guessed Correctly!'"></h1>
+    <div class="container-fluid" ng-controller="GuessingGameCtrl as game">
+        <guessing-game-title>by Daryl Shy</guessing-game-title>
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 text-center console h1 jumbotron"
+                ng-class="{
+                    warmer10: currentguess - correct < 100,
+                    warmer20: currentguess - correct >100 && currentguess - correct<200,
+                    correct: currentguess === correct
+                }"
+            >
+                <input type="number" ng-model="currentguess" ng-blur="colderWarmer(currentguess)">
+                <div ng-switch on="currentguess">
+                    <p ng-switch-default="currentguess" ng-cloak>Your Guess: {{ currentguess }}
+                        <span ng-if="currentguess" ng-show="currentguess > correct">-Too High</span>
+                        <span ng-if="currentguess" ng-show="currentguess < correct">-Too Low</span>
+                    </p>
+                    <p ng-if="currentguess" ng-bind="message" alert-danger></p>
+                    <h1 ng-switch-when="correct" ng-bind="'You Guessed Correctly!'"></h1>
+                </div>
+            </div>
         </div>
+
 
     </div>
 

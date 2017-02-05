@@ -1,3 +1,41 @@
+.container-fluid, body {
+  background-color: darkgrey;
+  height: 100%; }
 
+.console {
+  margin-top: 10%; }
+
+.warmer10 {
+  background-color: #ff3333; }
+
+.warmer20 {
+  background-color: #ff6666; }
+
+.warmer30 {
+  background-color: #ff9999; }
+
+.warmer40 {
+  background-color: #ffcccc; }
+
+.warmer50 {
+  background-color: white; }
+
+.colder10 {
+  background-color: #3333ff; }
+
+.colder20 {
+  background-color: #6666ff; }
+
+.colder30 {
+  background-color: #9999ff; }
+
+.colder40 {
+  background-color: #ccccff; }
+
+.colder50 {
+  background-color: white; }
+
+.correct {
+  background-color: limegreen !important; }
 
 /*# sourceMappingURL=main.css.map */

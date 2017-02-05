@@ -1,0 +1,22 @@
+.container-fluid, body{
+  background-color: darkgrey;
+  height: 100%;
+}
+.console{
+  margin-top: 10%;
+}
+
+@for $i from 1 through 5 {
+  .warmer#{$i * 10} {
+    background-color: lighten(red,$i*10%);
+  }
+}
+
+@for $i from 1 through 5 {
+  .colder#{$i * 10} {
+    background-color: lighten(blue,$i*10%);
+  }
+}
+.correct{
+  background-color: limegreen !important;
+}
