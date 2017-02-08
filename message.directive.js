@@ -4,8 +4,10 @@
 
     app.directive('myDirective', function() {
         return {
-            restrict: 'A',
-            scope: true
+            scope: true,
+            restrict: 'AE',
+            templateUrl: 'message.template.htm',
+            transclude: true
         };
     });
 

@@ -12,7 +12,13 @@
     <title>Document</title>
 </head>
 <body>
-    <div class="container-fluid div1" ng-controller="ClassController as myCtrl">{{ myCtrl.sayHello() }}</div>
+    <div class="container-fluid div1" ng-controller="ClassController">{{ sayHello() }}
+        <div ng-controller="OtherController">{{ sayHello() }}
+            <my-directive>
+                <p ng-include="'includeMe.htm'"></p>
+            </my-directive>
+        </div>
+    </div>
 
 
 
