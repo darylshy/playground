@@ -4,7 +4,10 @@
 
     app.directive('myDirective', function() {
         return {
-            scope: true,
+            scope: {
+                personName: '@'
+            },
+            replace: true,
             restrict: 'AE',
             templateUrl: 'message.template.htm',
             transclude: true

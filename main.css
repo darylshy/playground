@@ -6,4 +6,11 @@ div {
   div.div1 {
     background-color: darkblue; }
 
+footer {
+  background-color: darkblue; }
+
+.myTransclude {
+  font-size: 16px;
+  border: 1px dashed red; }
+
 /*# sourceMappingURL=main.css.map */

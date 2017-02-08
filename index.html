@@ -14,7 +14,7 @@
 <body>
     <div class="container-fluid div1" ng-controller="ClassController">{{ sayHello() }}
         <div ng-controller="OtherController">{{ sayHello() }}
-            <my-directive>
+            <my-directive person-name="{{name}}">
                 <p ng-include="'includeMe.htm'"></p>
             </my-directive>
         </div>
