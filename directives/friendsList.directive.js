@@ -34,8 +34,11 @@
                     scope.personObject.friends.unshift({});
                     scope.personObject.friends[0].name = friend;
                     scope.personObject.friends[0].best = false;
-                    $(elem).find('#add-friend').val('');
                     scope.newFriend = {};
+                };
+
+                scope.displayForm = function () {
+                    scope.showForm = !scope.showForm;
                 };
             },
 
