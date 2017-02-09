@@ -1,17 +1,23 @@
-div{
-  font-size:2em;
-  font-family: 'Cinzel', serif;
-  color: aliceblue;
-  padding: 20px;
-  &.div1{
-    background-color: darkblue;
+.panel-body>ul{
+  width: 220px;
+    li>span.friend-name{
+      display: inline-block;
+      width: 160px;
   }
 }
-footer{
-  background-color: darkblue;
+
+div.panel.panel-default.has-a-bestfriend{
+  padding: 20px 0 0 20px;
 }
 
-.myTransclude{
-  font-size: 16px;
-  border: 1px dashed red;
+.glyphicon-plus:hover,.glyphicon-minus:hover, .glyphicon-minus-sign:hover{
+  cursor: pointer;
+  color: lighten(grey,30%);
+}
+
+div.friends-panel-body>.friends-ul>.friends-li{
+  list-style: none;
+  span.glyphicon.glyphicon-minus-sign{
+    margin: 2px 10px 0 -30px;
+  }
 }

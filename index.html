@@ -12,12 +12,13 @@
     <title>Document</title>
 </head>
 <body>
-    <div class="container-fluid div1" ng-controller="ClassController">{{ sayHello() }}
-        <div ng-controller="OtherController">{{ sayHello() }}
-            <my-directive person-name="{{name}}">
-                <p ng-include="'includeMe.htm'"></p>
-            </my-directive>
-        </div>
+    <div class="container" ng-controller="UserInfoController">
+        <user-info
+                person-object="person1"
+                main-heading="{{mainHeading}}"></user-info>
+        <user-info
+                person-object="person2"
+                main-heading="{{mainHeading}}"></user-info>
     </div>
 
 
@@ -29,7 +30,9 @@
 <script src="node_modules/angular/angular.min.js"></script>
 <script src="app.js"></script>
 <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.11/angular-route.js"></script>
-<script src="message.controller.js"></script>
-<script src="message.directive.js"></script>
+<script src="controllers/userInfo.controller.js"></script>
+<script src="directives/userInfo.directive.js"></script>
+<script src="directives/collapseWidget.directive.js"></script>
+<script src="directives/friendsList.directive.js"></script>
 </body>
 </html>

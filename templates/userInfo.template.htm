@@ -1,0 +1,17 @@
+<div class="panel panel-primary">
+    <div class="panel-heading">{{ mainHeading }}
+        <span ng-show="hasCollapsed">for {{ personObject.first_name }} {{ personObject.last_name }}</span>
+        <collapse-widget has-collapsed="hasCollapsed"></collapse-widget>
+    </div>
+    <div class="panel-body" ng-show="!hasCollapsed">
+        <p class="h4">
+            <span >Name: </span>{{ personObject.first_name }} {{ personObject.last_name }}
+        </p>
+            <span class="h4">Address:</span>
+            <blockquote>
+                {{ personObject.address.street }}, {{ personObject.address.apt }}<br>
+                {{ personObject.address.city }}, {{ personObject.address.state }} {{ personObject.address.zip }}
+            </blockquote>
+            <friends-list person-object="personObject"></friends-list>
+    </div>
+</div>
