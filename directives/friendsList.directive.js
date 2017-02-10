@@ -1,5 +1,7 @@
 (function(){
 
+    //model definition: defines friends-list card labels and state.
+
     let app = angular.module('app');
 
     app.directive('friendsList', function () {
@@ -24,10 +26,9 @@
                     $scope.hasBest = $scope.personObject.bestFriends.length > 0;
                 };
             },
-            link: function (scope, elem, attrs) {
+            link: function (scope) {
                 scope.removeFriend = function(idx){
                     scope.personObject.friends.splice(idx,1);
-                    scope.isFriendsListEmpty =  scope.personObject.friends.length === 0;
                 };
 
                 scope.addFriend = function(friend){

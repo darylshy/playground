@@ -3,7 +3,9 @@
     let app = angular.module('app');
 
     function uiCtrl($scope) {
-        $scope.mainHeading = "User Info Card";
+
+        //model description: defines user info data
+
         $scope.person1 = {
             first_name: "Daryl",
             last_name: "Shy",
