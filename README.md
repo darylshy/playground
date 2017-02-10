@@ -6,3 +6,7 @@ Demonstrates:
 +  Use of directives and isolate scope  
 +  Directive communication with other directives  
 +  effective scope usage  
+
+  +  uses lite-server  
+  +  npm install   
+  +  npm start  
