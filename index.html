@@ -13,8 +13,9 @@
 </head>
 <body>
     <div class="container" ng-controller="UserInfoController">
-        <user-info-card person-object="person1"></user-info-card>
-        <user-info-card person-object="person2"></user-info-card>
+        <div ng-repeat="person in people">
+            <user-info-card person-object="person"></user-info-card>
+        </div>
     </div>
 
 
