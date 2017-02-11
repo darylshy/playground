@@ -15,10 +15,14 @@
                 $scope.showForm = false;
             },
             link: function (scope) {
-                scope.addFriend = function(friend){
-                    scope.personObject.friends.unshift({});
-                    scope.personObject.friends[0].name = friend;
-                    scope.personObject.friends[0].best = false;
+                scope.addFriend = function(name){
+                    scope.$emit('friendAdded', {
+                        person: scope.personObject,
+                        friend: {
+                            name: name,
+                            best: false
+                        }
+                    });
                     scope.newFriend = {};
                 };
 

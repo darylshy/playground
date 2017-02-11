@@ -10,6 +10,12 @@
             args.person.friends.splice(args.idx,1);
         });
 
+        $scope.$on('friendAdded', function (e, args) {
+            args.person.friends.unshift({});
+            args.person.friends[0].name = args.friend.name;
+            args.person.friends[0].best = args.friend.best;
+        });
+
         $scope.person1 = {
             first_name: "Daryl",
             last_name: "Shy",

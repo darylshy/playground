@@ -18,7 +18,9 @@
                             scope.personObject.bestFriends.push(friend);
                         }
                     }
-                    scope.$emit('newBestFriend', scope.personObject.bestFriends.length > 0);
+
+                    scope.isBestFriendsListEmpty = scope.personObject.bestFriends.length > 0
+                    scope.$emit('newBestFriend', scope.isBestFriendsListEmpty);
                 };
             }
         }
