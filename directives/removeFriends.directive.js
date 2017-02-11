@@ -7,11 +7,16 @@
 
         return {
             restrict: 'E',
-            personObject: '=',
+            scope: {
+                personObject: '='
+            },
             templateUrl: 'templates/removeFriends.template.htm',
             link: function (scope) {
-                scope.removeFriend = function(idx){
-                    scope.personObject.friends.splice(idx,1);
+                scope.removeFriend = function(){
+                    scope.$emit('friendRemoved', {
+                        person: scope.personObject,
+                        idx: scope.$parent.$parent.$index
+                    });
                 };
             }
         }

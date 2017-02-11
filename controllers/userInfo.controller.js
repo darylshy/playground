@@ -6,6 +6,10 @@
 
         //model description: defines user info data
 
+        $scope.$on('friendRemoved', function (e, args) {
+            args.person.friends.splice(args.idx,1);
+        });
+
         $scope.person1 = {
             first_name: "Daryl",
             last_name: "Shy",

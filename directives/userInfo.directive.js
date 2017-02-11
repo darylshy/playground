@@ -4,12 +4,11 @@
 
     let app = angular.module('app');
 
-    app.directive('userInfo', function () {
+    app.directive('userInfoCard', function () {
         return {
             restrict: 'E',
             scope: {
-                personObject: '=',
-                friendsHeading: '@'
+                personObject: '='
             },
             templateUrl: '../templates/userInfo.template.htm',
             controller: function ($scope) {
