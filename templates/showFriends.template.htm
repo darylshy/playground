@@ -1,0 +1,7 @@
+<ul class="friends-ul">
+    <li ng-repeat="friend in personObject.friends" class="friends-li">
+        <ng-transclude class="friends-li"></ng-transclude>
+        <span class="friend-name">{{ friend.name }}</span>
+        <input type="checkbox" ng-model="friend.best">
+    </li>
+</ul>

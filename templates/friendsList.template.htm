@@ -4,13 +4,9 @@
         <collapse-widget has-collapsed="hasCollapsed"></collapse-widget>
     </div>
     <div class="panel-body friends-panel-body" ng-show="!hasCollapsed">
-        <ul class="friends-ul">
-            <li ng-repeat="friend in personObject.friends" class="friends-li">
-                <remove-friends person-object="personObject"></remove-friends>
-                <span class="friend-name">{{ friend.name }}</span>
-                <input type="checkbox" ng-model="friend.best">
-            </li>
-        </ul>
+        <show-friends person-object="personObject">
+            <remove-friends person-object="personObject"></remove-friends>
+        </show-friends>
         <div class="panel-footer" ng-show="!hasCollapsed">
             <form name="addFriendForm" novalidate>
                 <div class="form-group">
