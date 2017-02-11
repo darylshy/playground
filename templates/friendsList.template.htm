@@ -19,16 +19,6 @@
                 </div>
             </form>
         </div>
-        <div class="panel panel-default has-a-bestfriend" ng-show="hasBest">
-            <div class="panel-header">Best Friends
-                <div class="panel-body">
-                    <ul>
-                        <li ng-repeat="bestFriend in personObject.bestFriends">
-                            {{ bestFriend.name }}
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
+        <show-best-friends person-object="personObject" has-best="{{hasBest}}"></show-best-friends>
     </div>
 </div>

@@ -16,7 +16,6 @@
                     for(let friend of scope.personObject.friends){
                         if(friend.best){
                             scope.personObject.bestFriends.push(friend);
-                            console.log(scope.personObject.bestFriends);
                         }
                     }
                     scope.$emit('newBestFriend', scope.personObject.bestFriends.length > 0);
