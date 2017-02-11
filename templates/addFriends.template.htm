@@ -1,0 +1,20 @@
+<button class="btn btn-success" ng-click="displayForm()">
+    <span class="glyphicon glyphicon-plus-sign"></span>
+    <span>Add Friend</span>
+</button>
+<input type="text"
+       id="add-friend"
+       placeholder="Add A Friend"
+       ng-show="showForm"
+       ng-model="newFriend.name"
+       maxlength="20"
+       required
+       name="addFriendInput"
+/>
+<input class="btn btn-success"
+       type="button"
+       value="Add"
+       ng-show="showForm"
+       ng-click="addFriend(newFriend.name)"
+       ng-disabled="addFriendForm.$invalid"
+/>

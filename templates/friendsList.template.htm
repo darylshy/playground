@@ -6,37 +6,16 @@
     <div class="panel-body friends-panel-body" ng-show="!hasCollapsed">
         <ul class="friends-ul">
             <li ng-repeat="friend in personObject.friends" class="friends-li">
-                <span class="glyphicon glyphicon-minus-sign pull-left"
-                      ng-click="removeFriend($index)"></span>
+                <remove-friends person-object="personObject"></remove-friends>
                 <span class="friend-name">{{ friend.name }}</span>
                 <input type="checkbox" ng-model="friend.best">
-                <!--<span ng-show="!!friend.best" class="pull-right friend-best">Best!</span>-->
             </li>
         </ul>
         <div class="panel-footer" ng-show="!hasCollapsed">
             <form name="addFriendForm" novalidate>
                 <div class="form-group">
-                    <button class="btn btn-success" ng-click="hasABest()">
-                        <span class="glyphicon glyphicon-refresh"></span>
-                        <span>Update Best Friends</span>
-                    </button>
-                    <button class="btn btn-success" ng-click="displayForm()">
-                        <span class="glyphicon glyphicon-plus-sign"></span>
-                        <span>Add Friend</span>
-                    </button>
-                    <input type="text"
-                           id="add-friend"
-                           placeholder="Add A Friend"
-                           ng-show="showForm"
-                           ng-model="newFriend.name"
-                           maxlength="20"
-                           required>
-                    <input class="btn btn-success"
-                           type="button"
-                           value="Add"
-                           ng-show="showForm"
-                           ng-click="addFriend(newFriend.name)"
-                           ng-disabled="addFriendForm.$invalid" />
+                    <update-best-friends person-object="personObject"></update-best-friends>
+                    <add-friends person-object="personObject" add-friend-form="addFriendForm"></add-friends>
                 </div>
             </form>
         </div>
