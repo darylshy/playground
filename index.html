@@ -12,7 +12,7 @@
     <title>Document</title>
 </head>
 <body>
-    <div class="container" ng-controller="UserInfoController">
+    <div class="container" ng-controller="UserDataController">
         <div ng-repeat="person in people">
             <user-info-card person-object="person"></user-info-card>
         </div>
@@ -27,8 +27,8 @@
 <script src="node_modules/angular/angular.min.js"></script>
 <script src="app.js"></script>
 <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.11/angular-route.js"></script>
-<script src="controllers/userInfo.controller.js"></script>
-<script src="directives/userInfo.directive.js"></script>
+<script src="controllers/userData.controller.js"></script>
+<script src="directives/userInfoCard.directive.js"></script>
 <script src="directives/collapseWidget.directive.js"></script>
 <script src="directives/friendsList.directive.js"></script>
 <script src="directives/removeFriends.directive.js"></script>

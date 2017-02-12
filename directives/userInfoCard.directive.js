@@ -10,7 +10,7 @@
             scope: {
                 personObject: '='
             },
-            templateUrl: '../templates/userInfo.template.htm',
+            templateUrl: '../templates/userInfoCard.template.htm',
             controller: function ($scope) {
                 $scope.mainHeading = "User Info Card";
                 $scope.hasCollapsed = false;

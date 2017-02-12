@@ -2,7 +2,7 @@
 
     let app = angular.module('app');
 
-    function uiCtrl($scope,$http) {
+    function userDataCtrl($scope,$http) {
 
         //model description: defines user info data
 
@@ -25,8 +25,8 @@
 
     }
 
-    app.controller('UserInfoController', uiCtrl);
+    app.controller('UserDataController', userDataCtrl);
 
-    uiCtrl.$inject = ['$scope', '$http'];
+    userDataCtrl.$inject = ['$scope', '$http'];
 
 })();
