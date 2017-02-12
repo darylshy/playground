@@ -12,12 +12,9 @@
     <title>Document</title>
 </head>
 <body>
-    <div class="container-fluid div1" ng-controller="ClassController">{{ sayHello() }}
-        <div ng-controller="OtherController">{{ sayHello() }}
-            <my-directive person-name="{{name}}">
-                <p ng-include="'includeMe.htm'"></p>
-            </my-directive>
-        </div>
+    <div class="container" ng-controller="mainCtrl">
+        <h1>Hello World</h1>
+        <h2 my-click>{{ message }}</h2>
     </div>
 
 
@@ -28,8 +25,5 @@
 <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 <script src="node_modules/angular/angular.min.js"></script>
 <script src="app.js"></script>
-<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.11/angular-route.js"></script>
-<script src="message.controller.js"></script>
-<script src="message.directive.js"></script>
-</body>
+<script src="practice.js"></script>
 </html>
